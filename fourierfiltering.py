@@ -33,4 +33,4 @@ filteredSpectrum = np.fft.ifftshift(np.fft.fftshift(spectrum) * normalizeRange(f
 # Generating the filtered image back into the space domain
 filteredImage = np.real(np.fft.ifft2(filteredSpectrum))
 
-print(calcRMSE(reference, normalizeRange(filteredImage, 255, np.uint8)))
+print("{:.4f}".format(calcRMSE(reference, normalizeRange(filteredImage, 255, np.uint8))))
